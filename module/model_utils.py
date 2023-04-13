@@ -5,8 +5,10 @@ from sklearn.metrics import make_scorer
 from sklearn.model_selection import GridSearchCV, KFold, train_test_split
 from sklearn.tree import DecisionTreeClassifier as DTC
 from module.model import model
+from module.log import printLog
 
 def runModel(config):
+    printLog("Start running model")
     TrainData1 = pd.read_csv(config['model']['input_file_location'], on_bad_lines='skip')
     TrainData1=TrainData1.replace([np.inf, -np.inf], np.nan)
 
