@@ -27,6 +27,6 @@ def columnNormalization(df):
             if (max - min) != 0:
                 value = (df[column_name][i] - min)/(max - min)
             else:
-                value = 0
+                value = max
             df._set_value(i, column_name, value)
     return df
