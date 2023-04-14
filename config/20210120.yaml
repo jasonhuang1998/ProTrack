@@ -1,0 +1,62 @@
+date : '20210120'
+
+module:
+  data_preprocess : True
+  run_model : True
+
+model:
+  input_file_location : 'output.csv'
+
+data_preprocess:
+  time_window : 60
+
+
+sniffer_list :
+  - sniffer_zero
+  - sniffer_one
+  - sniffer_two
+  - sniffer_three
+  # - sniffer_four
+  - sniffer_five
+  # - sniffer_six
+
+
+mobile_list :
+  u19e : '0000f22e-0000-1000-8000-00805f9b34fb'
+  a51 : '00007dd1-0000-1000-8000-00805f9b34fb'
+  v4445 : '0000dd9b-0000-1000-8000-00805f9b34fb'
+  uu : '0000ce9c-0000-1000-8000-00805f9b34fb'
+  asus : '0000efbb-0000-1000-8000-00805f9b34fb'
+  u11 : '000027ef-0000-1000-8000-00805f9b34fb'
+  V025 : '0000b1fc-0000-1000-8000-00805f9b34fb'
+
+relation_list :
+  - [0, 'v4025', 'a51']
+  - [0, 'v4445', 'u11']
+  - [1, 'uu', 'u11']
+  - [1, 'uu', 'v4445']
+  - [1, 'asus', 'v4025']
+  - [1, 'asus', 'a51']
+  - [2, 'v4445', 'a51']
+  - [2, 'uu', 'a51']
+  - [2, 'u19e', 'a51']
+  - [2, 'u11', 'a51']
+  - [2, 'v4025', 'v4445']
+  - [2, 'uu', 'v4025']
+  - [2, 'u19e', 'v4025']
+  - [2, 'u11', 'a51']
+  - [2, 'asus', 'v4445']
+  - [2, 'asus', 'uu']
+  - [2, 'asus', 'u19e']
+  - [2, 'asus', 'u11']
+  - [2, 'v4445', 'u19e']
+  - [2, 'uu', 'u19e']
+  - [2, 'u19e', 'u11']
+
+
+
+start_time :
+  - "16:19:45"
+
+end_time :
+  - "16:23:05"
