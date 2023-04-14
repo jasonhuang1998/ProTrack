@@ -4,9 +4,11 @@ import datetime
 from module.log import printLog
 from itertools import combinations
 from numpy.linalg import norm
+from module.normalizaion import normalization
 
 def dataPreprocess(config):
     wireless_data = getWirelessData(config)
+    wireless_data = normalization(wireless_data)
     wirelessData2Dataset(wireless_data, config)
     
 
