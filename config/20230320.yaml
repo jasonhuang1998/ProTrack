@@ -1,7 +1,7 @@
 date : '20230320'
 
 module:
-  data_preprocess : False
+  data_preprocess : True
   run_model : True
 
 model:
@@ -12,10 +12,10 @@ data_preprocess:
 
 
 sniffer_list :
-  - sniffer_zero
+  # - sniffer_zero
   - sniffer_one
   - sniffer_two
-  - sniffer_three
+  # - sniffer_three
   - sniffer_four
   - sniffer_five
   - sniffer_six
