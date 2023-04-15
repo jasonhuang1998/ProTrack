@@ -31,7 +31,7 @@ The classification report
 ## Usage
 ```
 pip install pipenv
-pipenv install requests
+pipenv install
 pipenv run python main.py
 ```
 ## Requirements
