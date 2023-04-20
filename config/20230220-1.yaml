@@ -1,0 +1,58 @@
+date : '20230220-1'
+
+module:
+  data_preprocess : True
+  run_model : True
+
+model:
+  input_file_location : 'output.csv'
+
+data_preprocess:
+  time_window : 60
+
+
+sniffer_list :
+  - sniffer_zero
+  - sniffer_one
+  - sniffer_two
+  - sniffer_three
+  - sniffer_four
+  - sniffer_five
+  - sniffer_six
+
+
+mobile_list :
+  uu : '0000ce9c-0000-1000-8000-00805f9b34fb'
+  u19e : '0000f22e-0000-1000-8000-00805f9b34fb'
+  v4445 : '0000dd9b-0000-1000-8000-00805f9b34fb'
+  a42 : '0000ccb5-0000-1000-8000-00805f9b34fb'
+
+relation :
+ - [0, 'v4445', 'uu']
+ - [0, 'uu', 'v4445']
+
+ - [2, 'a42', 'uu']
+ - [2, 'a42', 'u19e'] 
+ - [2, 'a42', 'v4445']
+ - [2, 'uu', 'a42']
+ - [2, 'u19e', 'a42'] 
+ - [2, 'v4445', 'a42']
+
+ - [1, 'u19e', 'uu']
+ - [1, 'u19e', 'v4445']
+ 
+ - [1, 'v4445', 'u19e']
+ - [1, 'uu', 'u19e']
+
+
+start_time :
+  - "16:42:00"
+  - "16:50:00"
+  - "16:57:00"
+  - "17:05:00"
+
+end_time :
+  - "16:47:00"
+  - "16:55:00"
+  - "17:02:00"
+  - "17:10:00"

@@ -36,8 +36,8 @@ def wirelessData2Dataset(wireless_data, config):
 
 
 def getRelation(dev1, dev2, config):
-    for relation in config['relation_list']:
-        if dev1 in relation and dev2 in relation:
+    for relation in config['relation']:
+        if dev1 == relation[1] and dev2 == relation[2]:
             return relation[0]
 
 
@@ -81,6 +81,8 @@ def getWirelessData(config):
             df1 = createDF1(config = config)
             df1 = addRow(config, df1 , config['mobile_list'][mobile_name], file_list, experiment_nummber)
             df = pd.concat([df, df1])
+        df = df.reset_index()
+        df = df.drop('index', axis=1)
         df_dict[mobile_name] = df
     return df_dict
 
